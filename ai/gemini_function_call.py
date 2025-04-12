@@ -45,6 +45,8 @@ response = client.models.generate_content(
     config=config,
     )
 
+print(response.text)
+
 #print(response.candidates[0].content.parts[0].function_call)
 
 if response.candidates[0].content.parts[0].function_call:
