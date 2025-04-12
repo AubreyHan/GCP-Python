@@ -68,4 +68,5 @@ if response.candidates[0].content.parts[0].function_call:
 
     print(final_response.text)
 
-
+else:
+    print("No function call detected.")
