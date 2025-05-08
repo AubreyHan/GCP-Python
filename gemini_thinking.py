@@ -1,5 +1,6 @@
 from google import genai
 from google.genai import types
+from IPython.display import HTML, Image, Markdown, display
 
 client = genai.Client(vertexai=True, location="us-central1", project='ai-demo-440003')
 
