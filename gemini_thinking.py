@@ -1,6 +1,5 @@
 from google import genai
 from google.genai import types
-from IPython.display import HTML, Image, Markdown, display
 
 client = genai.Client(vertexai=True, location="us-central1", project='ai-demo-440003')
 
@@ -13,10 +12,15 @@ config = types.GenerateContentConfig(
 
 response = client.models.generate_content(
     model="gemini-2.5-flash-preview-04-17",
-    contents='''How many R's are in the word strawberry?''',
-    config=config
+    contents='''Hello there! How can I help you today?''',
+    #config=config
 )
 
 print(response.text)
-print(response.usage_metadata.thoughts_token_count) #所使用的thinking token数
+print('input_token:',response.usage_metadata.prompt_token_count) 
+print('thought_token:',response.usage_metadata.thoughts_token_count)
+print('output_token:',response.usage_metadata.candidates_token_count)
+print('total_token:',response.usage_metadata.total_token_count)
+
+
 
