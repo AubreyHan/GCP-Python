@@ -17,10 +17,8 @@ response = client.models.generate_content(
 )
 
 print(response.text)
-print('input_token:',response.usage_metadata.prompt_token_count) 
+print('input_token:',response.usage_metadata.prompt_token_count)
 print('thought_token:',response.usage_metadata.thoughts_token_count)
 print('output_token:',response.usage_metadata.candidates_token_count)
 print('total_token:',response.usage_metadata.total_token_count)
-
-
 
