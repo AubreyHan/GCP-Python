@@ -5,8 +5,8 @@ client = genai.Client(vertexai=True, location="us-central1", project='ai-demo-44
 
 config = types.GenerateContentConfig(
     thinking_config=types.ThinkingConfig(
-        thinking_budget=100,    #控制Thinking的token数(1-24576，1024以下会统一为1024，0表示关闭)
-        include_thoughts=True,  #输出是否包含思考过程的汇总
+        thinking_budget=0,    #控制Thinking的token数(1-24576，1024以下会统一为1024，0表示关闭)
+        #include_thoughts=True,  #输出是否包含思考过程的汇总
     ), 
 )
 

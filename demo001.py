@@ -1,66 +1,30 @@
+import asyncio
+import os
+from datetime import datetime
 from google import genai
 from google.genai import types
-import base64
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
 
-def generate():
-  client = genai.Client(
-      vertexai=True,
-      project="hy-ai-demo",
-      location="us-central1",
-  )
+client = genai.Client(
+    vertexai=True,
+    project='ai-demo-440003',
+    location='us-central1',
+)
 
+server_params = StdioServerParameters(
+    command='npx',
+    args=['-y', 'phischmid/weather-macp'],
+    env=None,
+)
 
-  model = "gemini-2.5-pro-preview-03-25"
-  contents = [
-    types.Content(
-      role="user",
-      parts=[
-        types.Part.from_text(text='请描述广义相对论?')
-      ]
-    )
-  ]
-  generate_content_config = types.GenerateContentConfig(
-    temperature = 1,
-    top_p = 0.95,
-    max_output_tokens = 8192,
-    response_modalities = ["TEXT"],
-    speech_config = types.SpeechConfig(
-      voice_config = types.VoiceConfig(
-        prebuilt_voice_config = types.PrebuiltVoiceConfig(
-          voice_name = "zephyr"
-        )
-      ),
-    ),
-    safety_settings = [types.SafetySetting(
-      category="HARM_CATEGORY_HATE_SPEECH",
-      threshold="OFF"
-    ),types.SafetySetting(
-      category="HARM_CATEGORY_DANGEROUS_CONTENT",
-      threshold="OFF"
-    ),types.SafetySetting(
-      category="HARM_CATEGORY_SEXUALLY_EXPLICIT",
-      threshold="OFF"
-    ),types.SafetySetting(
-      category="HARM_CATEGORY_HARASSMENT",
-      threshold="OFF"
-    )],
-  )
+async def run():
+    async with stdio_client(server_params) as (read, write):
+        async with ClientSession(read, write) as session:
+            prompt = f"What is the weather in London in {datetime.now().strftime('%Y-%m-%d')}?"
+            await session.initialize()
 
-  response = client.models.generate_content(
-    model=model,
-    contents=contents,
-    config=generate_content_config,
-  )
+            mcp_tools = await session.list_tools()
+            print(f"Available tools: {mcp_tools}")
 
-  print(response)
-
-#   for chunk in client.models.generate_content(
-#     model = model,
-#     contents = contents,
-#     config = generate_content_config,
-#     ):
-#     print(chunk.text, end="")
-
-
-
-generate()
+asyncio.run(run())
