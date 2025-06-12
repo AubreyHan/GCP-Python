@@ -1,2 +1,0 @@
-# ./adk_agent_samples/fastmcp_agent/__init__.py
-from . import agent
