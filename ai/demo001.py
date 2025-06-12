@@ -2,7 +2,6 @@ import os
 from google.auth import default
 import google.auth.transport.requests
 import openai
-import random
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/yuanhancn/Tools/GithubRepo/GCP-SA/hy-20250609-001-6ba55150037b.json'
 
