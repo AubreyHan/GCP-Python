@@ -48,7 +48,7 @@ def generate():
       threshold="OFF"
     )]
     ),
-  )
+  
 
   for chunk in client.models.generate_content_stream(
     model = model,
