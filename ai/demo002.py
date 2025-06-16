@@ -46,9 +46,7 @@ def generate():
     ),types.SafetySetting(
       category="HARM_CATEGORY_HARASSMENT",
       threshold="OFF"
-    )],
-    thinking_config=types.ThinkingConfig(
-      thinking_budget=-1,
+    )]
     ),
   )
 
