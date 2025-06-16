@@ -33,7 +33,6 @@ def generate():
     temperature = 1,
     top_p = 1,
     seed = 0,
-    max_output_tokens = 65535,
     )
   
 
