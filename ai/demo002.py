@@ -8,8 +8,6 @@ def generate():
       location="global",
   )
 
-  # Note: Part.from_uri typically expects a Google Cloud Storage URI (gs://...).
-  # Support for YouTube URLs may vary.
   video1 = types.Part.from_uri(
       file_uri="https://www.youtube.com/watch?v=TOuF7ZbcCUs",
       mime_type="video/*",
@@ -19,8 +17,7 @@ def generate():
     fps=0.1
   )
 
-  # Using a standard and recent model name.
-  model = "gemini-1.5-flash-latest"
+  model = "gemini-2.0-flash-001"
   contents = [
     types.Content(
       role="user",
@@ -32,7 +29,6 @@ def generate():
     )
   ]
 
-  # Removed media_resolution as it was incomplete and is an optional parameter.
   generate_content_config = types.GenerateContentConfig(
     temperature = 1,
     top_p = 1,
