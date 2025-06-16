@@ -45,4 +45,4 @@ def generate():
     print(chunk.text, end="")
 
 generate()
-print("Hello, world!")
+print("Hello, world")
