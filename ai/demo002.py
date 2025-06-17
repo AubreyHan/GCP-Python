@@ -9,7 +9,7 @@ def generate():
   )
 
   video1 = types.Part.from_uri(
-      file_uri="https://www.youtube.com/watch?v=a-8XiE7W7u4",
+      file_uri="https://www.youtube.com/watch?v=_B3tj6owjtg",
       mime_type="video/*",
   )
 
