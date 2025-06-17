@@ -17,7 +17,7 @@ def generate():
     fps=0.1
   )
 
-  model = "gemini-2.5-flash-preview-04-17"
+  model = "gemini-2.5-flash-preview-05-20"
   contents = [
     types.Content(
       role="user",
