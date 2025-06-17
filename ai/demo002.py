@@ -24,7 +24,7 @@ def generate():
       parts=[
         video1,
         video_metadata,
-        types.Part.from_text(text="""请详细描述以上视频""")
+        types.Part.from_text(text="""请说明""")
       ]
     )
   ]
