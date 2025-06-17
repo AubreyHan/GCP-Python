@@ -24,7 +24,7 @@ def generate():
       parts=[
         video1,
         video_metadata,
-        types.Part.from_text(text="""请说明gemini在分析此视频时的采样率""")
+        types.Part.from_text(text="""请说明此视频的时长""")
       ]
     )
   ]
