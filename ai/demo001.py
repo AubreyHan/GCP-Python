@@ -54,4 +54,6 @@ def generate():
     config=generate_content_config
   )
 
+  print(response)
+
 generate()
