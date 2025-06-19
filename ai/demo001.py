@@ -1,4 +1,4 @@
-video_file_name = "/path/to/your/video.mp4"
+video_file_name = "/Users/yuanhancn/Tools/FFMpeg/"
 video_bytes = open(video_file_name, 'rb').read()
 
 response = client.models.generate_content(
