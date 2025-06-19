@@ -15,9 +15,6 @@ def generate():
   )
 
   video = types.Part(
-    video_metadata=types.VideoMetadata(
-      fps=10
-    ),
     file_data=types.FileData(
       file_uri="gs://hy-aibucket-001/5noaudio.mp4",
       mime_type="video/mp4"
