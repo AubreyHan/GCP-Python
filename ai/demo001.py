@@ -44,7 +44,7 @@ def generate():
       threshold="OFF"
     )],
     thinking_config=types.ThinkingConfig(
-      thinking_budget=-1,
+      thinking_budget=0,
     ),
   )
 
