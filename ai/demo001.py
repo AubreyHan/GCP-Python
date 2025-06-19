@@ -13,7 +13,7 @@ video_bytes = open(video_file_name, 'rb').read()
 response = client.models.generate_content(
     model='gemini-2.5-flash',
     contents=types.Content(
-        parts=[
+        parts=[u
             types.Part(
                 inline_data=types.Blob(
                     data=video_bytes,
