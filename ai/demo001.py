@@ -9,11 +9,6 @@ def generate():
       location="global",
   )
 
-  video1 = types.Part.from_uri(
-      file_uri="gs://hy-aibucket-001/5noaudio.mp4",
-      mime_type="video/mp4",
-  )
-
   video = types.Part(
     file_data=types.FileData(
       file_uri="gs://hy-aibucket-001/5noaudio.mp4",
