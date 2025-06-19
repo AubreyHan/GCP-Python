@@ -18,6 +18,7 @@ def generate():
     video_metadata=types.VideoMetadata(
       fps=1
     )
+    file_data=types.fi
   )
 
   model = "gemini-2.5-flash"
