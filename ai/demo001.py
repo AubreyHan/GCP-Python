@@ -19,7 +19,8 @@ def generate():
       fps=1
     ),
     file_data=types.FileData(
-      file_uri=
+      file_uri="gs://hy-aibucket-001/5noaudio.mp4",
+      mime_type=
     )
   )
 
