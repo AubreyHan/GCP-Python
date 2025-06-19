@@ -49,8 +49,9 @@ def generate():
   )
 
   response = client.models.generate_content(
-    model=model
-    contents=contents
+    model=model,
+    contents=contents,
+    config=generate_content_config
   )
 
 generate()
