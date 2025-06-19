@@ -15,7 +15,7 @@ def generate():
   )
 
   video = types.Part(
-    video_metadata=
+    video_metadata=types.
   )
 
   model = "gemini-2.5-flash"
