@@ -48,6 +48,6 @@ def generate():
     ),
   )
 
-  response = types.
+  response = client.models.
 
 generate()
