@@ -1,4 +1,4 @@
-video_file_name = "/Users/yuanhancn/Tools/FFMpeg/"
+video_file_name = "/Users/yuanhancn/Tools/FFMpeg/5noaudio.mp4"
 video_bytes = open(video_file_name, 'rb').read()
 
 response = client.models.generate_content(
@@ -15,3 +15,5 @@ response = client.models.generate_content(
         ]
     )
 )
+
+print(response)
