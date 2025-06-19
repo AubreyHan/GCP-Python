@@ -11,7 +11,7 @@ video_bytes = open(video_file_name, 'rb').read()
 
 
 response = client.models.generate_content(
-    model='models/gemini-2.5-flash-preview-05-20',
+    model='models/gemini-2.5-flash',
     contents=types.Content(
         parts=[
             types.Part(
