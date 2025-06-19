@@ -1,7 +1,9 @@
 from google import genai
 from google.auth import default
 
-
+client = genai.Client(
+    vertexai=True, credentials=credentials, project='ai-demo-440003', location='us-central1'
+)
 
 video_file_name = "/Users/yuanhancn/Tools/FFMpeg/5noaudio.mp4"
 video_bytes = open(video_file_name, 'rb').read()
