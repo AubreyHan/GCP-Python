@@ -20,7 +20,6 @@ def generate():
 
   video = types.Part(
     video_metadata=video_metadata,
-    
   )
 
   model = "gemini-2.5-flash"
@@ -30,6 +29,7 @@ def generate():
       parts=[
         types.Part.from_text(text="""请分析以下视频"""),
         video1,
+        video
       ]
     )
   ]
