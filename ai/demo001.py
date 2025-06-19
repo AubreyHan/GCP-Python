@@ -24,7 +24,8 @@ def generate():
       role="user",
       parts=[
         types.Part.from_text(text="""请分析以下视频"""),
-        video1
+        video1,
+        video_metadata
       ]
     )
   ]
