@@ -19,7 +19,7 @@ response = client.models.generate_content(
                 inline_data=types.Blob(
                     data=video_bytes,
                     mime_type='video/mp4'),
-                video_metadata=types.VideoMetadata(fps=5)
+                video_metadata=types.VideoMetadata(fps=1)
             ),
             types.Part(text='Please summarize the video in 3 sentences.')
         ]
