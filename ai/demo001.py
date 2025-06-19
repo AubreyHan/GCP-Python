@@ -9,7 +9,6 @@ client = genai.Client(
 video_file_name = "/Users/yuanhancn/Tools/FFMpeg/5noaudio.mp4"
 video_bytes = open(video_file_name, 'rb').read()
 
-client = 
 
 response = client.models.generate_content(
     model='models/gemini-2.5-flash-preview-05-20',
