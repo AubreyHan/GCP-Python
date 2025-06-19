@@ -14,6 +14,8 @@ def generate():
       mime_type="video/mp4",
   )
 
+  video_metadata = types.vi
+
   model = "gemini-2.5-flash"
   contents = [
     types.Content(
