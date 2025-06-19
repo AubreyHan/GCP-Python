@@ -29,7 +29,7 @@ def generate():
     types.Content(
       role="user",
       parts=[
-        video1,
+        video,
         types.Part.from_text(text="""请分析以上视频""")
       ]
     )
