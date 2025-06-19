@@ -48,11 +48,6 @@ def generate():
     ),
   )
 
-  for chunk in client.models.generate_content_stream(
-    model = model,
-    contents = contents,
-    config = generate_content_config,
-    ):
-    print(chunk.text, end="")
+  response = types.
 
 generate()
