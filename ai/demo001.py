@@ -1,3 +1,8 @@
+from google import genai
+from google.auth import default
+
+
+
 video_file_name = "/Users/yuanhancn/Tools/FFMpeg/5noaudio.mp4"
 video_bytes = open(video_file_name, 'rb').read()
 
