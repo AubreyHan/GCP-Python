@@ -9,7 +9,7 @@ client = genai.Client(vertexai=True, project='ai-demo-440003', location='us-cent
 
 operation = client.models.generate_videos(
     model="veo-3.0-fast-generate-preview",
-    prompt="a cat reading a book",
+    prompt="a cat reading a books",
     config=GenerateVideosConfig(
         aspect_ratio="16:9",
         output_gcs_uri='gs://hy-aibucket-001',
