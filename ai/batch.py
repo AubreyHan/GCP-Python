@@ -3,7 +3,7 @@ import time
 from google import genai
 from google.genai.types import CreateBatchJobConfig, JobState, HttpOptions
 
-client = genai.Client(http_options=HttpOptions(api_version="v1"),vertexai=True,location='us-central1',project='')
+client = genai.Client(http_options=HttpOptions(api_version="v1"),vertexai=True,location='us-central1',project='ai-demo-440003')
 # TODO(developer): Update and un-comment below line
 # output_uri = "gs://your-bucket/your-prefix"
 
