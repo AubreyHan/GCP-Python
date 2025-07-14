@@ -13,7 +13,7 @@ job = client.batches.create(
     # model="projects/{PROJECT_ID}/locations/{LOCATION}/models/{MODEL_ID}
     model="gemini-2.5-flash",
     # Source link: https://storage.cloud.google.com/cloud-samples-data/batch/prompt_for_batch_gemini_predict.jsonl
-    src="gs://cloud-samples-data/batch/prompt_for_batch_gemini_predict.jsonl",
+    src="",
     config=CreateBatchJobConfig(dest=output_uri),
 )
 print(f"Job name: {job.name}")
