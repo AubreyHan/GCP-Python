@@ -50,6 +50,7 @@ def generate():
 while True:
   try:
     generate()
+    break
   except ClientError as e:
     if e.code == 429:
       continue
