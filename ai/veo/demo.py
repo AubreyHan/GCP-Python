@@ -12,4 +12,4 @@ operation_name = 'projects/ai-demo-440003/locations/us-central1/publishers/googl
 operation = types.GenerateVideosOperation(name=operation_name)
 operation = client.operations.get(operation)
 
-print(operation.done)
+print(operation)
