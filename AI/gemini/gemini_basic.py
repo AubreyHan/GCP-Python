@@ -1,6 +1,6 @@
 import os
 from google import genai
 
-client = genai.c
+client = genai.client()
 
 
