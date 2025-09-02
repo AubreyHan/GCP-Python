@@ -1,7 +1,7 @@
 import os
 from google import genai
 
-os.
+os.environ
 
 
 
