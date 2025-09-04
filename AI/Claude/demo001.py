@@ -17,7 +17,7 @@ with client.messages.stream(
     messages=[
         {
             "role": "user",
-            "content": "Send me a recipe for banana bread.",
+            "content": "hello.",
         }
     ],
 ) as stream:
