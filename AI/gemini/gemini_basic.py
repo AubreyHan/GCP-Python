@@ -9,13 +9,6 @@ def generate():
       api_key=os.environ.get("GOOGLE_CLOUD_API_KEY"),
   )
 
-  msg2_text1 = types.Part.from_text(text="""**Returning a Greeting**
-
-I've processed your simple greeting and noted the lack of specific data for the schema. My current thought is to return a reciprocal greeting as a basic, albeit optional, response.
-
-**Generating a Response**
-
-I've analyzed your simple greeting and the constraints of the schema. My current thinking is to provide a reciprocal greeting in the optional \"response\" field, as there's no other specific data to process.""")
 
   model = "gemini-2.5-flash"
   contents = [
@@ -24,22 +17,7 @@ I've analyzed your simple greeting and the constraints of the schema. My current
       parts=[
         types.Part.from_text(text="""hello""")
       ]
-    ),
-    types.Content(
-      role="model",
-      parts=[
-        msg2_text1,
-        types.Part.from_text(text="""{
-  \"response\": \"Hello there!\"
-}""")
-      ]
-    ),
-    types.Content(
-      role="user",
-      parts=[
-        types.Part.from_text(text="""hello""")
-      ]
-    ),
+    )
   ]
 
   generate_content_config = types.GenerateContentConfig(
@@ -59,8 +37,6 @@ I've analyzed your simple greeting and the constraints of the schema. My current
       category="HARM_CATEGORY_HARASSMENT",
       threshold="OFF"
     )],
-    response_mime_type = "application/json",
-    response_schema = {"type":"OBJECT","properties":{"response":{"type":"STRING"}}},
     thinking_config=types.ThinkingConfig(
       thinking_budget=-1,
     ),
@@ -74,5 +50,3 @@ I've analyzed your simple greeting and the constraints of the schema. My current
     print(chunk.text, end="")
 
 generate()
-
-
