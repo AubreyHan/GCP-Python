@@ -6,7 +6,8 @@ import os
 def generate():
   client = genai.Client(
       vertexai=True,
-      pro,
+      project='hy-ai-demo',
+      location='global'
   )
 
 
