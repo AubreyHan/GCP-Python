@@ -48,6 +48,6 @@ def generate():
     contents = contents,
     config = generate_content_config,
     ):
-    print(chunk.text, end="")
+    print(chunk, end="")
 
 generate()
