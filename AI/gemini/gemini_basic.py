@@ -6,7 +6,7 @@ import os
 def generate():
   client = genai.Client(
       vertexai=True,
-      api_key=os.environ.get("GOOGLE_CLOUD_API_KEY"),
+      pro,
   )
 
 
