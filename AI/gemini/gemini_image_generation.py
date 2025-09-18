@@ -3,10 +3,14 @@ from google.genai import types
 import base64
 import os
 
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/yuanhancn/Tools/python/SAKey/hy-ai-demo.json'
+
 def generate():
   client = genai.Client(
       vertexai=True,
-      api_key='AQ.Ab8RN6IDa6Ly3J47e-Bpy4C6HwOsypBWYVscL9vffTT4w5iv_Q',
+      project='hy-ai-demo',
+      location='global',
+      http_options=types.HttpOptions(timeout=20000)
   )
 
 
