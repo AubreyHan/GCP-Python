@@ -1,6 +1,5 @@
 from google import genai
 from google.genai import types
-import base64
 import os
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/yuanhancn/Tools/python/SAKey/hy-ai-demo.json'
